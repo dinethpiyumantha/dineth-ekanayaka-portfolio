@@ -1,9 +1,8 @@
 import React from "react";
-import emailjs, { init } from 'emailjs-com';
+import emailjs, { init } from "emailjs-com";
 import "./style.css";
 
 export default class Contact extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -20,29 +19,47 @@ export default class Contact extends React.Component {
   }
 
   handleNameChange(event) {
-    this.setState({name: event.target.value});
+    this.setState({ name: event.target.value });
   }
 
   handleEmailChange(event) {
-    this.setState({email: event.target.value});
+    this.setState({ email: event.target.value });
   }
 
   handleMessageChange(event) {
-    this.setState({message: event.target.value});
+    this.setState({ message: event.target.value });
   }
 
   handleSubmit(event) {
     init("user_V3doF0fjpXZY2jCuDMEtN");
-    
-    emailjs.send('service_n2x45fn', 'template_2gpe85l', {name: this.state.name, email: this.state.email, message: this.state.message})
-    .then((result) => {
-        console.log('SUCCESS!', result.status, result.text);
-        this.setState({name: '', email: '', message: ''});
-        alert("success")
-    }, (error) => {
-        console.log('FAILED...', error);
-        alert("unsuccess")
-    });
+
+    if (
+      !(
+        this.state.name === "" ||
+        this.state.email === "" ||
+        this.state.message === ""
+      )
+    ) {
+      emailjs
+        .send("service_n2x45fn", "template_2gpe85l", {
+          name: this.state.name,
+          email: this.state.email,
+          message: this.state.message,
+        })
+        .then(
+          (result) => {
+            console.log("SUCCESS!", result.status, result.text);
+            this.setState({ name: "", email: "", message: "" });
+            alert("success");
+          },
+          (error) => {
+            console.log("FAILED...", error);
+            alert("unsuccess");
+          }
+        );
+    } else {
+      alert("fill all fields");
+    }
 
     event.preventDefault();
   }
@@ -50,7 +67,10 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div>
-        <form className="d-flex justify-content-center" onSubmit={this.handleSubmit}>
+        <form
+          className="d-flex justify-content-center"
+          onSubmit={this.handleSubmit}
+        >
           <div className="card p-md-4 col-md-5">
             <h2>Get in touch with me</h2>
             <div className="mb-3">
@@ -65,6 +85,7 @@ export default class Contact extends React.Component {
                 name="user_name"
                 value={this.state.name}
                 onChange={this.handleNameChange}
+                required
               />
             </div>
             <div className="mb-3">
@@ -80,6 +101,7 @@ export default class Contact extends React.Component {
                 name="user_email"
                 value={this.state.email}
                 onChange={this.handleEmailChange}
+                required
               />
             </div>
             <div className="mb-3">
@@ -94,6 +116,7 @@ export default class Contact extends React.Component {
                 name="message"
                 value={this.state.message}
                 onChange={this.handleMessageChange}
+                required
               ></textarea>
             </div>
             <button type="submit" className="btn btn-dp mb-3 w-25">
