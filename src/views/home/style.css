@@ -1,0 +1,42 @@
+.my-photo-back{
+    height: calc(100vh - 70px);
+    background-image: url("../../assets/myphotosm.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+  }
+  .signature {
+    max-width: 300px;
+  }
+  .name {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+  }
+  .title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    line-height: 50px;
+    font-size: 40px;
+  }
+  .show-mobile {
+    display: none;
+  }
+  @media only screen and (max-width: 768px) {
+    .pad {
+      padding: 20px 40px;
+    }
+    .title {
+      line-height: 40px;
+      font-size: 30px;
+    }
+    .no-mobile {
+      display: none;
+    }
+    .show-mobile {
+      display: block;
+    }
+    .my-photo-back{
+      background-image: url("../../assets/myphototra.png");
+    }
+  }

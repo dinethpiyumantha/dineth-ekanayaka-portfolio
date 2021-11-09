@@ -1,0 +1,15 @@
+.my-photo-back-color {
+    height: calc(100vh - 70px);
+    background-image: url("../../assets/colormypic.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+  }
+  .text-xxl {
+    font-size: 60px;
+  }
+  @media only screen and (max-width: 768px) {
+    .my-photo-back-color {
+      background-image: none;
+    }
+  }

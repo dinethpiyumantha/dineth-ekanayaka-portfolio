@@ -1,0 +1,19 @@
+html, body {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: url('assets/background.jpg');
+  background-size: cover;
+}
+
+.App {
+  background: url("assets/pixel_overlay.png") repeat scroll left top;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
