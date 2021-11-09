@@ -17,14 +17,24 @@ import Contact from "./views/contact/Contact";
 import Portfolio from "./views/portfolio/Portfolio";
 import Project from "./views/project/Project";
 import NavBar from "./components/navbar/NavBar";
+import LoadingScreen from "./components/loadingScreen/LoadingScreen";
+import { useEffect, useState } from "react";
 
 /**
  * This is the main react component, it helps to navigate throw components
  * @returns JSX
  */
 function App() {
+
+  const [ loader, setLoader ] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setLoader(false), 3000)
+  }, []);
+
   return (
     <Router>
+      {loader && <LoadingScreen />}
       <div className="App" style={{backgroundColor: CONST.colors.primary}}>
         <NavBar />
         <div>

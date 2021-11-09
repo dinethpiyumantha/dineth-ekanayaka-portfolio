@@ -30,6 +30,7 @@ export default function NavBar() {
         </div>
       </Link>
 
+      {/* eslint-disable-next-line */}
       <a href="https://github.com/dinethpiyumantha" target="_blank">
         <div class="btn btn-outline-light rounded-circle no-mobile">
           <i class="fab fa-github"></i>
