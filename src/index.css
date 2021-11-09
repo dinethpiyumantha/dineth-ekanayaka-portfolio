@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.btn-dp {
+  background: #050b12;
+  color: #fff;
+  border: 1px solid #050b12;
+  transition: 0.2s;
+}
+.btn-dp:hover {
+  color: #050b12;
+  background: #fff;
+}
