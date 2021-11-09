@@ -1,7 +1,9 @@
 import React from "react";
+import emailjs, { init } from 'emailjs-com';
 import "./style.css";
 
 export default class Contact extends React.Component {
+
   constructor(props) {
     super(props);
 
@@ -30,7 +32,18 @@ export default class Contact extends React.Component {
   }
 
   handleSubmit(event) {
+    init("user_V3doF0fjpXZY2jCuDMEtN");
     
+    emailjs.send('service_n2x45fn', 'template_2gpe85l', {name: this.state.name, email: this.state.email, message: this.state.message})
+    .then((result) => {
+        console.log('SUCCESS!', result.status, result.text);
+        this.setState({name: '', email: '', message: ''});
+        alert("success")
+    }, (error) => {
+        console.log('FAILED...', error);
+        alert("unsuccess")
+    });
+
     event.preventDefault();
   }
 
