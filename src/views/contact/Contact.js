@@ -2,6 +2,8 @@ import React from "react";
 import emailjs, { init } from "emailjs-com";
 import "./style.css";
 
+
+
 export default class Contact extends React.Component {
   constructor(props) {
     super(props);
@@ -17,6 +19,8 @@ export default class Contact extends React.Component {
     this.handleMessageChange = this.handleMessageChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  
 
   handleNameChange(event) {
     this.setState({ name: event.target.value });
@@ -50,7 +54,7 @@ export default class Contact extends React.Component {
           (result) => {
             console.log("SUCCESS!", result.status, result.text);
             this.setState({ name: "", email: "", message: "" });
-            alert("success");
+            alert.show('Oh look, an alert!')
           },
           (error) => {
             console.log("FAILED...", error);

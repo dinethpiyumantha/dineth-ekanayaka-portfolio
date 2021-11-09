@@ -4,7 +4,7 @@ html, body {
 
 body {
   margin: 0;
-  background-image: url('assets/background.jpg');
+  background: "#050b12";
   background-size: cover;
 }
 

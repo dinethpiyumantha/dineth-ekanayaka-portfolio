@@ -2,7 +2,7 @@
 import React from "react";
 import TypeAnimation from "react-type-animation";
 
-// Images
+// Assets
 import Signature from "../../assets/signature.png";
 
 // Styles
