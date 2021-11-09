@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <div>
       <form className="d-flex justify-content-center">
-        <div className="card p-4 col-md-5">
+        <div className="card p-md-4 col-md-5">
           <h2>Get in touch with me</h2>
           <div className="mb-3">
             <label for="exampleFormControlInput1" className="form-label">
