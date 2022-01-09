@@ -21,8 +21,7 @@ export default function Home() {
         <div className="row py-0">
           <div className="col-sm-7 h-50 py-5 px-2">
             <h2 className="text-white title">
-              Hello, I'm Dineth Piyumantha, a software developer & UI designer
-              currently based somewhere.
+              Hello, I'm Dineth Piyumantha, a software developer & UI designer.
             </h2>
             <img src={Signature} className="signature mt-5" alt="signature" />
 
