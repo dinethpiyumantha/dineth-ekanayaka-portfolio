@@ -9,19 +9,8 @@ export default function About() {
           <div class="col-lg-6 text-light">
             <h3>About Me</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-              debitis! Odio officiis ut, dolore quaerat culpa eius sunt
-              necessitatibus similique labore inventore! Sequi dolores nobis
-              minus laboriosam explicabo, magni voluptatibus sit magnam earum,
-              consequuntur repellendus nostrum qui voluptate, eos dolor debitis
-              ipsa nemo? Quasi soluta quibusdam qui debitis a. Nam, itaque
-              laborum placeat eius rem laboriosam voluptatum nisi eveniet dolor
-              magnam ipsa totam animi, labore reprehenderit dolore. Rem fuga
-              reiciendis voluptates incidunt dicta sequi, doloribus perferendis
-              tenetur, porro eveniet vel eligendi excepturi, ratione provident
-              deleniti. Culpa sit, quis cum maxime assumenda repellendus
-              voluptate maiores non minus sapiente exercitationem earum
-              architecto.
+              I am an undergraduate student at the faculty of computing - SLIIT of Sri Lanka pursuing my BSc (special) in Information Technology.
+              Seeking a beginner role to enhance and explore my technical knowledge gained at SLIIT University in the last two years. I am always highly enthused about my work and tasks ahead and also I am committed to learning and self-development so that I can consistently achieve better results.
             </p>
           </div>
         </div>
